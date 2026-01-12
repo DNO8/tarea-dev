@@ -35,7 +35,7 @@ Tu solución debe pasar los siguientes casos de prueba:
 ## 📝 Tu Solución
 
 Deja acá el link a tu video explicando tu solución con tus palabras
-
+https://www.youtube.com/shorts/naCd7g8xqGs
 ---
 
 ## 🤔 Supuestos y Decisiones
