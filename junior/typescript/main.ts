@@ -18,11 +18,39 @@ function calculatePanels(
   roofWidth: number,
   roofHeight: number
 ): number {
-  // Implementa acá tu solución
   
-  return 0;
-}
+  //panelWidth/roofWidth, panelHeight/roofHeight
+  //capturar restos, ver si se puede poner otro panel en horizontal o vertical
+  //panelWidth/roofHeight, panelHeight/roofWidth
+  
+  console.log("▓▓▓▓ Calculating panels... ▓▓▓▓");
+  // Implementa acá tu solución
+    const panelOrientation=[
+    { 
+      width: panelWidth, 
+      height: panelHeight
+    },
+    { 
+      width: panelHeight, 
+      height: panelWidth
+    }
+  ];
+  const totalPanels=panelOrientation.map((orientation) => {
+    const panelsTentative = Math.floor(roofWidth / orientation.width) * Math.floor(roofHeight / orientation.height);
 
+    const remainingWidth = roofWidth % orientation.width;
+    const remainingHeight = roofHeight % orientation.height;
+
+    const rotatedWidth = orientation.height;
+    const rotatedHeight = orientation.width;
+
+    const extraX = remainingWidth >= rotatedWidth ? Math.floor(roofHeight / rotatedHeight) : 0;
+    const extraY = remainingHeight >= rotatedHeight ? Math.floor(roofWidth / rotatedWidth) : 0;
+
+    return panelsTentative + Math.max(extraX, extraY);
+  });
+  return totalPanels.reduce((acc,currentValue) => Math.max(acc,currentValue),0);
+}
 function main(): void {
   console.log("🐕 Wuuf wuuf wuuf 🐕");
   console.log("================================\n");

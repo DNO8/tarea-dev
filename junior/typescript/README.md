@@ -38,25 +38,8 @@ Deja acá el link a tu video explicando tu solución con tus palabras
 
 ---
 
-## 💰 Bonus (Opcional)
-
-Si completaste alguno de los ejercicios bonus, explica tu solución aquí:
-
-### Bonus Implementado
-*[Indica cuál bonus implementaste: Opción 1 (techo triangular) o Opción 2 (rectángulos superpuestos)]*
-
-
-
-
-### Explicación del Bonus
-*[Explica cómo adaptaste tu algoritmo para resolver el bonus]*
-
-
-
-
----
-
 ## 🤔 Supuestos y Decisiones
 
-*[Si tuviste que tomar algún supuesto o decisión de diseño, explícalo aquí]*
+Bueno tuve que suponer si era para todo tipo de orientacion y se me ocurrio solo para vertical y horizontal pero vi que me faltaron casos de uso. (pensé en un masonry)
+separaría un poco más las responsabilidades para que el código sea más fácil de mantener y testear.
 
